@@ -1,0 +1,127 @@
+<!--
+  Authors : initappz (Rahul Jograna)
+  Website : https://initappz.com/
+  App Name : initPay This App Template Source code is licensed as per the
+  terms found in the Website https://initappz.com/license
+  Copyright and Good Faith Purchasers © 2023-present initappz.
+ -->
+<ion-header mode="md" class="ion-no-border">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="onBack()">
+        <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Electricity Payment</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="make-payment-screen">
+    <ion-label class="title">Choose Payment Method</ion-label>
+    <ion-item lines="none" detail="">
+      <ion-icon slot="start" name="card" color="secondary"></ion-icon>
+      <ion-label class="text-info">
+        <h3 class="text-title">Balance</h3>
+        <p class="text-sub-title">$40.33</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-label class="title">Transaction Details</ion-label>
+
+    <div class="invoice">
+      <ion-item lines="none">
+        <ion-avatar slot="start" [ngStyle]="{'background-color': '#F53D6E'}">
+          <img src="assets/images/bills/flash.png" class="company-img" />
+        </ion-avatar>
+        <ion-label class="text-info">
+          <h3 class="text-title">Electricity A</h3>
+          <p class="text-sub-title">Company A Descriptions</p>
+        </ion-label>
+      </ion-item>
+
+      <div class="breaker"></div>
+
+      <ion-row class="payment-info">
+        <ion-col size="5">
+          <ion-label class="title">Customer Name</ion-label>
+        </ion-col>
+        <ion-col size="7">
+          <ion-label class="sub-title">Hazel D. Jones</ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row class="payment-info">
+        <ion-col size="5">
+          <ion-label class="title">Customer ID</ion-label>
+        </ion-col>
+        <ion-col size="7">
+          <ion-label class="sub-title">3636525-66588</ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row class="payment-info">
+        <ion-col size="5">
+          <ion-label class="title">Address</ion-label>
+        </ion-col>
+        <ion-col size="7">
+          <ion-label class="sub-title">4822 Bedford Street Birmingham, AL 35244</ion-label>
+        </ion-col>
+      </ion-row>
+
+      <div class="breaker"></div>
+
+      <ion-row class="payment-info">
+        <ion-col size="5">
+          <ion-label class="title">Payment Cycle</ion-label>
+        </ion-col>
+        <ion-col size="7">
+          <ion-label class="sub-title">May</ion-label>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="payment-info">
+        <ion-col size="5">
+          <ion-label class="title">Electricity Amount</ion-label>
+        </ion-col>
+        <ion-col size="7">
+          <ion-label class="sub-title">$300.55</ion-label>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="payment-info">
+        <ion-col size="5">
+          <ion-label class="title">Tax</ion-label>
+        </ion-col>
+        <ion-col size="7">
+          <ion-label class="sub-title">$10.55</ion-label>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="payment-info">
+        <ion-col size="5">
+          <ion-label class="title">Transaction Fee</ion-label>
+        </ion-col>
+        <ion-col size="7">
+          <ion-label class="sub-title">Free</ion-label>
+        </ion-col>
+      </ion-row>
+
+      <div class="breaker"></div>
+
+      <ion-row class="payment-info">
+        <ion-col size="5">
+          <ion-label class="title">Total</ion-label>
+        </ion-col>
+        <ion-col size="7">
+          <ion-label class="sub-title-bold">$311.03</ion-label>
+        </ion-col>
+      </ion-row>
+
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer mode="md">
+  <ion-button expand="block" (click)="onSuccessPage()">
+    Confirm
+  </ion-button>
+</ion-footer>

@@ -1,0 +1,37 @@
+<!--
+  Authors : initappz (Rahul Jograna)
+  Website : https://initappz.com/
+  App Name : initPay This App Template Source code is licensed as per the
+  terms found in the Website https://initappz.com/license
+  Copyright and Good Faith Purchasers © 2023-present initappz.
+-->
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="home">
+      <ion-icon aria-hidden="true" name="home-sharp"></ion-icon>
+      <ion-label>Home</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="history">
+      <ion-icon aria-hidden="true" name="timer-outline"></ion-icon>
+      <ion-label>History</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button></ion-tab-button>
+
+    <ion-tab-button tab="deals">
+      <ion-icon aria-hidden="true" name="gift-outline"></ion-icon>
+      <ion-label>Deals</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="profile">
+      <ion-icon aria-hidden="true" name="person-circle-outline"></ion-icon>
+      <ion-label>Profile</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
+<ion-fab vertical="bottom" horizontal="center" slot="fixed" edge="false">
+  <ion-fab-button type="button" (click)="startScan()">
+    <ion-icon name="qr-code-outline"></ion-icon>
+  </ion-fab-button>
+</ion-fab>

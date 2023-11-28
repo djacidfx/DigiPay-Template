@@ -1,0 +1,43 @@
+<!--
+  Authors : initappz (Rahul Jograna)
+  Website : https://initappz.com/
+  App Name : initPay This App Template Source code is licensed as per the
+  terms found in the Website https://initappz.com/license
+  Copyright and Good Faith Purchasers © 2023-present initappz.
+ -->
+<ion-header class="ion-no-border" mode="md">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="onBack()">
+        <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Receive Money</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="receive-screen">
+    <div class="top-background"></div>
+
+    <div class="main-content">
+      <div class="profile-content">
+        <div class="finger-lock-screen">
+
+          <div class="img-item">
+            <img src="assets/images/qr-code.png" alt="" class="img-tag">
+          </div>
+
+          <ion-label class="head">0912-33655-98547-3355</ion-label>
+
+          <ion-label class="sub-finger">Set the amount and send to your<br> friend to
+            receive money</ion-label>
+
+          <ion-button expand="block">
+            Set Amount
+          </ion-button>
+        </div>
+      </div>
+      <div class="spacer"></div>
+    </div>
+  </div>
+</ion-content>

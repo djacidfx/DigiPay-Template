@@ -1,0 +1,36 @@
+<!--
+  Authors : initappz (Rahul Jograna)
+  Website : https://initappz.com/
+  App Name : initPay This App Template Source code is licensed as per the
+  terms found in the Website https://initappz.com/license
+  Copyright and Good Faith Purchasers © 2023-present initappz.
+ -->
+<ion-header mode="md" class="ion-no-border">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="onBack()">
+        <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Electricity Payment</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="start" name="search-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="payment-screen">
+    <ion-item *ngFor="let item of paymentList" lines="none" detail="" (click)="onPayment()">
+      <ion-avatar slot="start" [ngStyle]="{'background-color': item.color}">
+        <img src="assets/images/bills/flash.png" class="company-img" />
+      </ion-avatar>
+      <ion-label class="text-info">
+        <h3 class="text-title">{{item.title}}</h3>
+        <p class="text-sub-title">{{item.sub_title}}</p>
+      </ion-label>
+    </ion-item>
+  </div>
+</ion-content>

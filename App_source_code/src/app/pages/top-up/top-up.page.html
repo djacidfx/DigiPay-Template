@@ -1,0 +1,84 @@
+<!--
+  Authors : initappz (Rahul Jograna)
+  Website : https://initappz.com/
+  App Name : initPay This App Template Source code is licensed as per the
+  terms found in the Website https://initappz.com/license
+  Copyright and Good Faith Purchasers © 2023-present initappz.
+ -->
+<ion-header mode="md" class="ion-no-border">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="onBack()">
+        <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Top Up</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="top-up-screen">
+    <div class="top-background"></div>
+
+    <div class="main-content">
+      <div class="profile-content">
+        <ion-label class="title">Balance</ion-label>
+        <ion-item lines="none">
+          <ion-icon slot="start" name="card" color="secondary"></ion-icon>
+          <ion-input placeholder="$326.23"></ion-input>
+        </ion-item>
+      </div>
+      <div class="spacer"></div>
+      <div class="other-content">
+        <ion-label class="title">Amount</ion-label>
+
+        <div class="chips">
+          <ion-chip color="medium" mode="ios" outline="true">
+            <ion-label>$50.00</ion-label>
+          </ion-chip>
+          <ion-chip color="primary" mode="ios">
+            <ion-label>$100.00</ion-label>
+          </ion-chip>
+          <ion-chip color="medium" mode="ios" outline="true">
+            <ion-label>$150.00</ion-label>
+          </ion-chip>
+        </div>
+
+        <ion-label class="sub-title">Or type the amount here</ion-label>
+
+        <ion-item class="input-amount" lines="none">
+          <ion-input placeholder="Min $10.32"></ion-input>
+        </ion-item>
+
+        <ion-label class="title">Credit Card</ion-label>
+
+        <div class="spacer"></div>
+
+        <div class="slider">
+          <swiper-container #swiper slides-per-view="1.2" space-between="10" initial-slide="1">
+            <swiper-slide *ngFor="let item of cardsList">
+              <div class="card-ui" [ngStyle]="{'background-color': item.color}">
+                <div class="image-container">
+                  <img src="assets/images/chip.png" alt="" class="img">
+                  <img src="assets/images/visa.png" alt="" class="img">
+                </div>
+                <ion-label class="number">{{item.number}}</ion-label>
+                <div class="name-container">
+                  <ion-label class="name">{{item.name}}</ion-label>
+                  <ion-label class="name">{{item.exp}}</ion-label>
+                </div>
+              </div>
+            </swiper-slide>
+          </swiper-container>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</ion-content>
+<ion-footer mode="md">
+  <ion-button expand="block" (click)="onSuccess()">
+    Top Up Now
+  </ion-button>
+</ion-footer>

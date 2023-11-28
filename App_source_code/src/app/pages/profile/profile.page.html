@@ -1,0 +1,98 @@
+<!--
+  Authors : initappz (Rahul Jograna)
+  Website : https://initappz.com/
+  App Name : initPay This App Template Source code is licensed as per the
+  terms found in the Website https://initappz.com/license
+  Copyright and Good Faith Purchasers © 2023-present initappz.
+ -->
+<ion-header class="ion-no-border" mode="md">
+  <ion-toolbar color="primary">
+    <ion-title>Profile</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="start" name="notifications-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="profile-screen">
+    <div class="top-background"></div>
+
+    <div class="main-content">
+      <div class="profile-content">
+        <div class="img-item">
+          <img src="assets/images/man.png" alt="" class="img-tag">
+        </div>
+        <ion-label class="head">Joseph L. Giese</ion-label>
+        <ion-label class="sub">964-356-9966</ion-label>
+        <div class="breaker"> </div>
+        <ion-row>
+          <ion-col size="6">
+            <ion-button expand="block" fill="outline" color="medium">
+              <ion-icon slot="start" name="qr-code-outline"></ion-icon>
+              QR Code
+            </ion-button>
+          </ion-col>
+
+          <ion-col size="6">
+            <ion-button expand="block" fill="outline" color="medium">
+              <ion-icon slot="start" name="barcode-outline"></ion-icon>
+              Barcode
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </div>
+
+      <div class="spacer"></div>
+
+      <div class="navigation-buttons">
+        <ion-item lines="none" detail="">
+          <ion-icon name="person" slot="start" color="secondary"></ion-icon>
+          <ion-label>Change Profile</ion-label>
+        </ion-item>
+      </div>
+
+      <div class="navigation-buttons">
+        <ion-item lines="none" detail="" (click)="onMyCards()">
+          <ion-icon name="card" slot="start" color="secondary"></ion-icon>
+          <ion-label>My Card</ion-label>
+        </ion-item>
+      </div>
+
+      <div class="navigation-buttons">
+        <ion-item lines="none" detail="">
+          <ion-icon name="film" slot="start" color="secondary"></ion-icon>
+          <ion-label>Promo Code</ion-label>
+        </ion-item>
+      </div>
+
+      <div class="navigation-buttons">
+        <ion-item lines="none" detail="">
+          <ion-icon name="lock-closed" slot="start" color="secondary"></ion-icon>
+          <ion-label>Change Security Code</ion-label>
+        </ion-item>
+      </div>
+
+      <div class="navigation-buttons">
+        <ion-item lines="none" detail="" (click)="onSettings()">
+          <ion-icon name="settings" slot="start" color="secondary"></ion-icon>
+          <ion-label>Setting</ion-label>
+        </ion-item>
+      </div>
+
+      <div class="navigation-buttons">
+        <ion-item lines="none" detail="">
+          <ion-icon name="document" slot="start" color="secondary"></ion-icon>
+          <ion-label>Terms of Services</ion-label>
+        </ion-item>
+      </div>
+
+      <ion-button expand="block" shape="round" color="danger" class="signout" (click)="onLogout()">
+        Sign Out
+      </ion-button>
+
+    </div>
+
+  </div>
+</ion-content>

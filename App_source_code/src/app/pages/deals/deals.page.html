@@ -1,0 +1,50 @@
+<!--
+  Authors : initappz (Rahul Jograna)
+  Website : https://initappz.com/
+  App Name : initPay This App Template Source code is licensed as per the
+  terms found in the Website https://initappz.com/license
+  Copyright and Good Faith Purchasers © 2023-present initappz.
+ -->
+<ion-header class="ion-no-border" mode="md">
+  <ion-toolbar color="primary">
+    <ion-title>Deals</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="start" name="notifications-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="deals-screen">
+    <div class="top-background"></div>
+
+    <div class="main-content">
+      <div class="profile-content">
+        <div class="billsList">
+          <div *ngFor="let item of payBillsList" class="pay-bills">
+            <div class="image-container">
+              <img [src]="item.image" alt="" class="bill-image">
+            </div>
+            <ion-label class="bill-name">{{item.name}}</ion-label>
+          </div>
+        </div>
+      </div>
+
+      <div class="spacer"></div>
+
+      <div *ngFor="let item of offersList" class="offer-list">
+        <div class="imgs" [style.backgroundImage]="'url('+item.image+')'"></div>
+        <div class="content">
+          <div class="dates">
+            <ion-label class="valid">Valid until</ion-label>
+            <ion-label class="date">{{item.date}}</ion-label>
+          </div>
+          <ion-label class="offer-name">{{item.name}}</ion-label>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</ion-content>

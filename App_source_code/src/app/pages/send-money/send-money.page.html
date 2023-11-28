@@ -1,0 +1,45 @@
+<!--
+  Authors : initappz (Rahul Jograna)
+  Website : https://initappz.com/
+  App Name : initPay This App Template Source code is licensed as per the
+  terms found in the Website https://initappz.com/license
+  Copyright and Good Faith Purchasers © 2023-present initappz.
+ -->
+<ion-header mode="md">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="onBack()">
+        <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Send Money</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="send-money-screen">
+    <ion-item detail="" lines="none">
+      <ion-icon name="card" slot="start" color="secondary"></ion-icon>
+      <ion-label>Transfer to initPay</ion-label>
+    </ion-item>
+    <ion-item detail="" lines="none">
+      <ion-icon name="business" slot="start" color="secondary"></ion-icon>
+      <ion-label>Transfer to Bank</ion-label>
+    </ion-item>
+
+    <ion-label class="title">Transaction History</ion-label>
+
+    <div *ngFor="let item of history" class="card-info">
+      <div class="info">
+        <div class="img-container">
+          <img [src]="item.image" alt="" class="img">
+        </div>
+        <div class="names">
+          <ion-label class="name">{{item.name}}</ion-label>
+          <ion-label class="date">{{item.date}}</ion-label>
+        </div>
+      </div>
+      <ion-label class="amount">{{item.amount}}</ion-label>
+    </div>
+  </div>
+</ion-content>

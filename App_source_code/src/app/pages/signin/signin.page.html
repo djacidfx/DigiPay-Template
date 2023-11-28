@@ -1,0 +1,54 @@
+<!--
+  Authors : initappz (Rahul Jograna)
+  Website : https://initappz.com/
+  App Name : initPay This App Template Source code is licensed as per the
+  terms found in the Website https://initappz.com/license
+  Copyright and Good Faith Purchasers © 2023-present initappz.
+ -->
+<ion-content>
+  <div class="login-screen">
+    <div class="top-background"></div>
+    <div class="main-content">
+      <ion-label class="head">Login</ion-label>
+      <div class="img-item">
+        <img src="assets/images/password.png" alt="" class="img-tag">
+      </div>
+      <ion-label class="sub">Type your Phone Number and <br> Password to continue</ion-label>
+
+      <ion-row class="mobile-item">
+        <ion-col size="3" class="d-flex-center cc-border">
+          <ion-label>🇺🇸 +1</ion-label>
+        </ion-col>
+        <ion-col size="9" class="d-flex-center mobile-border">
+          <ion-input type="number" placeholder="(968) 4235 - 546 - 333"></ion-input>
+        </ion-col>
+      </ion-row>
+
+      <div class="password-content-login">
+        <ion-item lines="none" class="password-input">
+          <ion-icon name="lock-closed" slot="start"></ion-icon>
+          <ion-input placeholder="Password" type="password" name="password"
+            [type]="viewPassword== true?'text':'password'"></ion-input>
+          <ion-button (click)="changeType()" fill="clear" slot="end" class="toggle_btn">
+            <ion-icon slot="icon-only" [name]="viewPassword == true? 'eye-outline':'eye-off-outline'">
+            </ion-icon>
+          </ion-button>
+        </ion-item>
+
+      </div>
+
+      <ion-button expand="block" (click)="onHome()">
+        Sign In
+      </ion-button>
+
+      <ion-button expand="block" fill="outline" (click)="openFingerLock()">
+        <ion-icon slot="start" name="finger-print-outline"></ion-icon>
+        Sig in With Fingerprint
+      </ion-button>
+
+      <ion-button expand="block" fill="clear" shape="round" color="medium">
+        Forgot Password?
+      </ion-button>
+    </div>
+  </div>
+</ion-content>
